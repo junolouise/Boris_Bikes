@@ -32,7 +32,7 @@ describe DockingStation do
 
         it 'raises an error when bike is already docked' do
             bike = Bike.new
-            subject.dock(bike)
+            20.times { subject.dock Bike.new }
             expect { subject.dock(bike) }.to raise_error 'Cannot dock bike'
         end
     end
